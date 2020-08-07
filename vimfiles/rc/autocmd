@@ -1,0 +1,11 @@
+" vim: ft=vim
+
+if has('autocmd')
+	autocmd filetype python set expandtab
+	autocmd filetype html,xml set listchars-=tab:>.
+
+	autocmd BufRead,BufNewFile *.go set filetype=go
+	autocmd Filetype go set makeprg=go\ build\ ./...
+	" au FileType go au BufWritePre <buffer> Fmt
+	autocmd BufWritePost *.go silent :GoImports
+endif

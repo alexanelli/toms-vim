@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -eu
+
+mydir="$(dirname ${BASH_SOURCE[0]})"
+if [[ $mydir == $HOME/.vim ]]; then
+	echo "Are you trying to delete this repo??!?"
+fi
+rm -rf $HOME/.vim
+rm -f $HOME/.vimrc
+cd $HOME
+ln -s $mydir $HOME/.vim
+cd $HOME/.vim
+ln -s $mydir/vimrc $HOME/.vimrc
+git submodule update --init
+vim +PluginInstall +PluginUpdate +PluginClean +GoInstallBinaries +GoUpdateBinaries +qall

@@ -1,0 +1,45 @@
+" vim: ft=vim
+"
+filetype off
+set nocompatible " be iMproved, required
+call plug#begin('~/.vim/plugged')
+" ---
+
+" Vundle!!
+Plug 'VundleVim/Vundle.vim'
+" NERDTree!!!
+Plug 'scrooloose/nerdtree'
+ "Syntax Checking
+Plug 'scrooloose/syntastic'
+ "Auto completion
+Plug 'Shougo/neocomplete.vim' 
+"Plug 'roxma/vim-hug-neovim-rpc'
+"Plug 'roxma/nvim-yarp'
+"Plug 'shougo/deoplete.nvim'
+" Go (golang) support for Vim
+Plug 'fatih/vim-go'
+" Tags
+Plug 'majutsushi/tagbar'
+" Move around in a really cool way. Badass
+Plug 'easymotion/vim-easymotion'
+" Markdown
+Plug 'suan/vim-instant-markdown'
+" Comment quickly
+Plug 'scrooloose/nerdcommenter'
+" Find all fuzzy
+Plug 'ctrlpvim/ctrlp.vim'
+" Statusline
+Plug 'bling/vim-airline'
+"Plug 'itchyny/lightline.vim'
+Plug 'rking/ag.vim'
+"Plug 'godlygeek/csapprox'
+Plug 'yuttie/hydrangea-vim'
+"Plug 'nightsense/simplifysimplify'
+"Plug 'rhysd/vim-color-spring-night'
+"Plug 'zchee/deoplete-go'
+" ---
+call plug#end()
+filetype plugin indent on    " required
+
+let g:deoplete#enable_at_startup = 1
+

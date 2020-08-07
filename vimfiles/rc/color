@@ -1,0 +1,23 @@
+" vim: ft=vim
+
+" colorscheme morning
+
+if has('gui_running')
+	let g:indent_guides_enable_on_vim_startup=0 
+	let g:solarized_visibility="low"
+	hi Comment ctermfg=DarkGrey guifg=DarkGrey
+
+	if &t_Co >= 256 || has("gui_running")
+		"colorscheme mustang
+	endif
+
+	if &t_Co > 2 || has("gui_running")
+		syntax on " switch syntax highlighting on, when the terminal has colors
+	endif
+endif
+
+" Color Column
+set colorcolumn=81
+highlight ColorColumn ctermbg=grey guibg=grey
+syntax on 
+

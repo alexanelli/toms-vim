@@ -1,0 +1,26 @@
+set nocompatible  " VIM not vi!
+set encoding=utf8 " 说中文吧！
+set completeopt-=preview
+
+source ~/.vim/rc/plugins " Load Plugins
+
+" Vim Configuration
+source ~/.vim/rc/settings
+source ~/.vim/rc/mappings
+source ~/.vim/rc/mouse
+source ~/.vim/rc/statusline
+
+" Plugin Configuration
+source ~/.vim/rc/plugin/nerdtree
+source ~/.vim/rc/plugin/vim-go
+source ~/.vim/rc/plugin/ctrlp
+
+filetype plugin indent on
+
+syntax enable
+set nolist
+
+colorscheme hydrangea
+
+let g:deoplete#enable_yarp = 1
+set t_ut=

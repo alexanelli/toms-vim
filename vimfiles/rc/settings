@@ -1,0 +1,41 @@
+" vim: ft=vim
+set nocompatible  " VIM not vi!
+set encoding=utf8 " 说中文吧！
+set hidden
+set wrap
+set noautochdir
+set go-=a
+set autoindent    " always set autoindenting on
+set copyindent    " copy the previous indentation on autoindenting
+set number        " always show line numbers
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch     " set show matching parenthesis
+"set ignorecase    " ignore case when searching
+set smartcase     " ignore case if search all lowercase, case-sensitive otherwise
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
+set nobackup
+set noswapfile
+set backspace=indent,eol,start " allow backspace over in insert mode
+" History
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title                " change the terminal's title
+set noerrorbells         " don't beep
+set visualbell
+set t_vb=
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.  " Highlight Whitespaces
+
+" Folding
+set foldnestmax=10
+set nofoldenable
+set foldlevel=0
+
+" For shell scripts ensure 2 spaces no tabs.
+au FileType sh setlocal tabstop=2 shiftwidth=2 sts=2 expandtab
+
+set scrolloff=3
+set rnu

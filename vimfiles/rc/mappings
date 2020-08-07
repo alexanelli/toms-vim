@@ -1,0 +1,31 @@
+" vim: ft=vim
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+let mapleader=","
+map <leader>/ :execute 'NERDTreeToggle'<CR>
+
+" Use Q for formatting the current paragraph (or selection)
+vmap Q gq
+nmap Q gqap
+
+" NO Arrow Keys :)
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+" Move to next logical row instead of actual for wrap
+nnoremap j gj
+nnoremap k gk
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+nmap <silent> ,<CR> :nohlsearch<CR>
+
+" Make (go build)
+nmap <F5> :make<leader>m<CR>
